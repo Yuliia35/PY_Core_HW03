@@ -27,10 +27,6 @@ if __name__ == "__main__":
 def get_numbers_ticket (min_value, max_value, quantity):
     if not (1<=min_value<max_value<=1000):
         return []
-    if not (1<=quantity<=(max_value*min_value+1)):
-        return []
-
-
     lottery_numbers = set ()
     while len (lottery_numbers) != quantity:
         lottery_numbers.add(randint(min_value, max_value))
@@ -39,4 +35,4 @@ def get_numbers_ticket (min_value, max_value, quantity):
     
 
     
-print (get_numbers_ticket(100,50,3))
+print (get_numbers_ticket(10,49,6))
