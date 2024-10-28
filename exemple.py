@@ -2,8 +2,6 @@ from datetime import datetime
 from random import randint, sample
 
 
-#date = int(input("Please enter a date in year-month-day format: "))
-
 "Excesize 1"
 
 def get_days_from_today(date):
@@ -41,4 +39,4 @@ def get_numbers_ticket (min_value, max_value, quantity):
     
 
     
-print (get_numbers_ticket(10,50,3))
+print (get_numbers_ticket(100,50,3))
