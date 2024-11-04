@@ -28,7 +28,7 @@ def get_numbers_ticket (min_value, max_value, quantity):
     if not (1<=min_value<max_value<=1000):
         return []
 
-    if not (1<=quantity<=max_value, min_value+1):
+    if quantity<=min_value or quantity<=max_value:
         return []
 
 
@@ -38,7 +38,7 @@ def get_numbers_ticket (min_value, max_value, quantity):
     return(sorted(sample(list(lottery_numbers), k=quantity)))
 
 
-lottery_numbers = get_numbers_ticket(10, 2, 15)
+lottery_numbers = get_numbers_ticket(10, 100, 6)
 print("Ваші лотерейні числа:", lottery_numbers)
     
 
