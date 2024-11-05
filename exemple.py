@@ -28,17 +28,17 @@ def get_numbers_ticket (min_value, max_value, quantity):
     if not (1<=min_value<max_value<=1000):
         return []
 
-    if quantity<=min_value or quantity<=max_value:
+    if not (1<=quantity<=max_value-min_value+1):
         return []
 
 
     lottery_numbers = set ()
     while len (lottery_numbers) != quantity:
-        lottery_numbers.add(randint(min_value, max_value))
+        lottery_numbers.add(randint(min_value, max_value+1))
     return(sorted(sample(list(lottery_numbers), k=quantity)))
 
 
-lottery_numbers = get_numbers_ticket(10, 100, 6)
+lottery_numbers = get_numbers_ticket(1, 43, 20)
 print("Ваші лотерейні числа:", lottery_numbers)
     
 
